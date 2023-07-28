@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  color: hsl(214, 17%, 51%);
+}
+main {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  width: 730px;
+  height: 285px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px 0px hsl(212, 23%, 69%);
+}
+h1 {
+  font-weight: 700px;
+  color: hsl(217, 19%, 35%);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.r-content {
+  margin: 38px 60px 0 40px;
+}
+.author {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.name {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+.l-content {
+  width: 285px;
+  border-radius: 10px 0 0 10px;
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 21px;
+}
+.share {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(142deg) brightness(103%) contrast(102%);
+  width: min-content;
+  user-select: none;
+}
+.wrapper {
+  border-radius: 50%;
+  background-color: hsl(214, 17%, 51%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.share-items {
+  display: flex;
+  position: absolute;
+  top: -80px;
+  background-color: hsl(217, 19%, 35%);
+  width: 248px;
+  height: 55px;
+  box-sizing: border-box;
+  padding: 18px 35px 12px 35px;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: center;
+  color: hsl(210, 46%, 95%);
+  user-select: none;
+  cursor: default;
+}
+.share-items p {
+  letter-spacing: 6px;
+  height: 20px;
+}
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+
+  border-top: 15px solid hsl(217, 19%, 35%);
+  bottom: -15px;
+  left: 108.5px;
+}
+.hidden {
+  display: none;
+}
+.active {
+  display: flex;
+  animation: fade-in 0.3s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+    scale: 0.2;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+.fake-share {
+  display: none;
+}
+@media (max-width: 700px) {
+  main {
+    width: 327px;
+    height: 512px;
+    flex-direction: column;
+  }
+  .l-content {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+  .r-content {
+    margin: 42px 39px 33px 24px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+  .r-content p {
+    line-height: 18px;
+    font-size: 13.4px;
+  }
+  .bottom {
+    margin-top: 34px;
+  }
+  .triangle {
+    display: none;
+  }
+  .share {
+    filter: none;
+  }
+  .wrapper {
+    background-color: hsl(210, 46%, 95%);
+  }
+  .share-items {
+    width: 327px;
+    height: 85px;
+    border-radius: 0 0 10px 10px;
+    left: -256px;
+    top: -29px;
+    padding-right: 39px;
+  }
+  .fake-share {
+    display: flex;
+    background-color: red;
+    user-select: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55px;
+    background-color: hsl(214, 17%, 51%);
+  }
+  .fake-share img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+      hue-rotate(142deg) brightness(103%) contrast(102%);
+  }
+}
+/*  */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
